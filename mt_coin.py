@@ -108,3 +108,25 @@ old1_tails = result_per_coin(df5['1A-CT'].iloc[-1], df8['1A-CT'].iloc[-1],  df11
 old5_tails = result_per_coin(df2['5A-CT'].iloc[-1], df4['5A-CT'].iloc[-1], df7['5A-CT'].iloc[-1], df12['5A-CT'].iloc[-1])
 old10_tails = result_per_coin(df3['10A-CT'].iloc[-1], df7['10A-CT'].iloc[-1], df13['10A-CT'].iloc[-1])
 old_others_tails = result_per_coin(df1['2A-CT'].iloc[-1])
+
+
+# var for new
+new5_heads_df6 = df6['5B-CH'].iloc[-1]
+new5_tails_df6 = df6['5B-CT'].iloc[-1]
+others1_heads_df6 = df6['20B-CH'].iloc[-1]
+others1_tails_df6 = df6['20B-CT'].iloc[-1]
+
+others2_heads_df14_cumsum = np.cumsum(df14['20B-H'])
+others2_heads_df14 = others2_heads_df14_cumsum.iloc[-1]
+others2_tails_df14_cumsum = np.cumsum(df14['20B-T'])
+others2_tails_df14 = others2_tails_df14_cumsum.iloc[-1]
+
+new1_heads = result_per_coin(df1['1B-CH'].iloc[-1], df2['1B-CH'].iloc[-1], df3['1B-CH'].iloc[-1], df5['1B-CH'].iloc[-1], df9['1B-CH'].iloc[-1], df15['1B-CH'].iloc[-1])
+new5_heads = result_per_coin(new5_heads_df6, df4['5B-CH'].iloc[-1], df9['5B-CH'].iloc[-1], df10['5B-CH'].iloc[-1], df12['5B-CH'].iloc[-1], df15['5B-CH'].iloc[-1])
+new10_heads = result_per_coin(df8['10B-CH'].iloc[-1], df10['10B-CH'].iloc[-1], df11['10B-CH'].iloc[-1])
+new_others_heads = result_per_coin(others1_heads_df6, df9['20B-CH'].iloc[-1])
+
+new1_tails = result_per_coin(df1['1B-CT'].iloc[-1], df2['1B-CT'].iloc[-1], df3['1B-CT'].iloc[-1], df5['1B-CT'].iloc[-1], df9['1B-CT'].iloc[-1], df15['1B-CT'].iloc[-1])
+new5_tails = result_per_coin(new5_tails_df6, df4['5B-CT'].iloc[-1], df9['5B-CT'].iloc[-1], df12['5B-CT'].iloc[-1], df15['5B-CT'].iloc[-1], df10['5B-CT'].iloc[-1])
+new10_tails = result_per_coin(df8['10B-CT'].iloc[-1], df10['10B-CT'].iloc[-1], df11['10B-CT'].iloc[-1])
+new_others_tails = result_per_coin(others1_tails_df6, df9['20B-CT'].iloc[-1])
