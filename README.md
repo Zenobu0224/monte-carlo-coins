@@ -154,3 +154,124 @@ No significant bias is observed.
 </p>
 
 <hr>
+
+<p>
+  <img src="imgs/plot4.png">
+</p>
+
+<h2>Plot 4: Line Chart — Cumulative Heads Over Time</h2>
+
+<h3>Purpose:</h3>
+
+<p>
+This shows how the number of heads increases over time as more flips occur.
+</p>
+
+<h3>How it works:</h3>
+
+<p>Uses cumulative sum:</p>
+
+<pre><code>np.cumsum(...)
+</code></pre>
+
+<p>
+Each line represents a coin type and denomination.
+</p>
+
+<ul>
+<li>Solid lines = Wood coins</li>
+<li>Dashed lines = Tile coins</li>
+</ul>
+
+<h3>What it shows:</h3>
+
+<ul>
+<li>The number of heads increases steadily over flips</li>
+<li>The lines appear approximately linear</li>
+</ul>
+
+<h3>Interpretation:</h3>
+
+<p>
+This demonstrates the <b>Law of Large Numbers</b>.
+</p>
+
+<p>
+As the number of flips increases, the observed results approach expected probability.
+</p>
+
+<p>
+The steady growth confirms randomness without bias.
+</p>
+
+<hr>
+
+<h2>Explanation of Key Functions in the Code</h2>
+
+<h3>total_flip_result()</h3>
+
+<p><b>Purpose:</b><br>
+Calculates total heads or tails across all 15 groups.
+</p>
+
+<p>Uses:</p>
+
+<pre><code>.iloc[-1]
+</code></pre>
+
+<p>
+This gets the final cumulative count.
+</p>
+
+<hr>
+
+<h3>result_per_coin()</h3>
+
+<p><b>Purpose:</b><br>
+Adds flip counts from multiple groups.
+</p>
+
+<p>Example:</p>
+
+<pre><code>new1_heads = result_per_coin(df1, df2, df3)
+</code></pre>
+
+<hr>
+
+<h3>concat_df()</h3>
+
+<p><b>Purpose:</b><br>
+Combines multiple flip series and computes cumulative heads or tails over time.
+</p>
+
+<p>Uses:</p>
+
+<pre><code>np.cumsum()
+</code></pre>
+
+<p>
+This produces the cumulative line plot.
+</p>
+
+<hr>
+
+<h2>Overall Interpretation of the Experiment</h2>
+
+<ul>
+<li>Heads and tails occur with nearly equal probability</li>
+<li>Old coins and new coins behave similarly</li>
+<li>Different denominations show no significant bias</li>
+<li>Results follow expected probability theory</li>
+</ul>
+
+<p>
+This confirms that the coin toss simulation produces fair and random outcomes.
+</p>
+
+<hr>
+
+<h2>Scientific Conclusion</h2>
+
+<p>
+The results of the coin toss simulation across 15 groups confirm that the probability of obtaining heads or tails is approximately equal. All visualizations, including stacked bar charts, pie charts, comparison charts, and cumulative line plots, support the theoretical expectation of a fair coin. As the number of flips increases, the observed outcomes converge toward a 50/50 distribution, demonstrating the Law of Large Numbers. No significant bias was observed between old and new coins or between different denominations.
+</p>
