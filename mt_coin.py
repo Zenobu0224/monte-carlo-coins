@@ -52,3 +52,24 @@ def total_flip_result(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, d
 def result_per_coin(*dfs):
     """Sum any number of coin flip results"""
     return sum(dfs)
+
+
+def concat_df(*series, heads=False, tails=False):
+    """Concatenate multiple series and return cumulative sum
+    
+    For normal convention columns (most dataframes):
+        - H columns: 1=heads, 0=tails -> count 1s for heads
+        - T columns: 1=tails, 0=heads -> count 1s for tails
+    
+    For df1 with reversed convention:
+        - Raw columns have 1=heads, 0=tails
+        - But when passed to this function, they should already be in correct format
+    """
+    if heads or tails:
+        # Combine all series into one
+        combined = pd.concat(list(series), ignore_index=True)
+        
+        # Return cumulative sum (assuming all series are already in correct format)
+        return np.cumsum(combined)
+    
+    return np.array([0])
