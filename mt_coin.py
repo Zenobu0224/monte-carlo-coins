@@ -47,3 +47,8 @@ def total_flip_result(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, d
         return sum(g_values)
     
     return 0
+
+
+def result_per_coin(*dfs):
+    """Sum any number of coin flip results"""
+    return sum(dfs)
