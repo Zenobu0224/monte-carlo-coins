@@ -181,9 +181,7 @@ legend_elements = [
     Patch(facecolor='#1f77b4', label='1 Peso'),
     Patch(facecolor='#ff7f0e', label='5 Peso'),
     Patch(facecolor='#2ca02c', label='10 Peso'),
-    Patch(facecolor='#d62728', label='Others'),
-    Patch(facecolor='gray', alpha=1.0, label='Heads'),
-    Patch(facecolor='gray', alpha=0.6, label='Tails')
+    Patch(facecolor='#d62728', label='Others')
 ]
 axes[0,0].legend(handles=legend_elements, loc='upper left')
 
@@ -238,10 +236,10 @@ tails_tiles10 = concat_df(df10['10B-T'], df11['10B-T'], df13['10A-T'], tails=Tru
 tails_tiles_others = concat_df(df9['20B-T'], df14['20B-T'], tails=True)
 
 # Get final values for comparison
-wood_heads_final = [heads_wood1[-1], heads_wood5[-1], heads_wood10[-1], heads_wood_others[-1]]
-wood_tails_final = [tails_wood1[-1], tails_wood5[-1], tails_wood10[-1], tails_wood_others[-1]]
-tiles_heads_final = [heads_tiles1[-1], heads_tiles5[-1], heads_tiles10[-1], heads_tiles_others[-1]]
-tiles_tails_final = [tails_tiles1[-1], tails_tiles5[-1], tails_tiles10[-1], tails_tiles_others[-1]]
+wood_heads_final = [heads_wood1.iloc[-1], heads_wood5.iloc[-1], heads_wood10.iloc[-1], heads_wood_others.iloc[-1]]
+wood_tails_final = [tails_wood1.iloc[-1], tails_wood5.iloc[-1], tails_wood10.iloc[-1], tails_wood_others.iloc[-1]]
+tiles_heads_final = [heads_tiles1.iloc[-1], heads_tiles5.iloc[-1], heads_tiles10.iloc[-1], heads_tiles_others.iloc[-1]]
+tiles_tails_final = [tails_tiles1.iloc[-1], tails_tiles5.iloc[-1], tails_tiles10.iloc[-1], tails_tiles_others.iloc[-1]]
 
 # Create comparison bar chart
 y_labels = ["1 Peso", "5 Peso", "10 Peso", "Others"]
