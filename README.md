@@ -3,7 +3,7 @@
 </p>
 
 <p>
-  <imgs src="imgs/plot1.png">
+  <img src="imgs/plot1.png">
 </p>
 <h2>Plot 1: Stacked Bar Chart — Coin Flips: Heads vs Tails</h2>
 
@@ -57,7 +57,7 @@ P(Heads) ≈ 0.5 &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; P(Tails) ≈ 0.5
 <hr>
 
 <p>
-  <img src="plot2.png">
+  <img src="imgs/plot2.png">
 </p>
 
 <h2>Plot 2: Pie Chart — Combined Heads and Tails</h2>
@@ -96,6 +96,61 @@ This confirms that the coin toss simulation behaves like a fair random process.
 
 <p>
 The closer the result is to 50%–50%, the more it follows theoretical probability.
+</p>
+
+<hr>
+
+<p>
+  <img src="imgs/plot33.png">
+</p>
+
+<h2>Plot 3: Horizontal Bar Chart — Wood vs Tiles Comparison</h2>
+
+<h3>Purpose:</h3>
+
+<p>
+This compares heads and tails counts between:
+</p>
+
+<ul>
+<li>Wood coins (Old coins)</li>
+<li>Tile coins (New coins)</li>
+</ul>
+
+<p>
+for each denomination.
+</p>
+
+<h3>How it works:</h3>
+
+<p>For each denomination:</p>
+
+<ul>
+<li>Wood Heads</li>
+<li>Wood Tails</li>
+<li>Tiles Heads</li>
+<li>Tiles Tails</li>
+</ul>
+
+<p>
+are shown side by side.
+</p>
+
+<h3>What it shows:</h3>
+
+<ul>
+<li>Comparison of old vs new coin fairness</li>
+<li>Comparison of heads vs tails balance per denomination</li>
+</ul>
+
+<h3>Interpretation:</h3>
+
+<p>
+If wood and tile coins have similar heads/tails counts, both coin types behave fairly.
+</p>
+
+<p>
+No significant bias is observed.
 </p>
 
 <hr>
