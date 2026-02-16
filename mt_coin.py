@@ -73,3 +73,21 @@ def concat_df(*series, heads=False, tails=False):
         return np.cumsum(combined)
     
     return np.array([0])
+
+
+# DATAFRAMES (G1 - G15)
+df1 = pd.read_csv("g1.csv")
+df2 = pd.read_csv("g2.csv")
+df3 = pd.read_csv("g3.csv")
+df4 = pd.read_csv("g4.csv")
+df5 = pd.read_csv("g5.csv")
+df6 = pd.read_csv("g6.csv")
+df7 = pd.read_csv("g7.csv")
+df8 = pd.read_csv("g8.csv")
+df9 = pd.read_csv("g9.csv")
+df10 = pd.read_csv("g10.csv")
+df11 = pd.read_csv("g11.csv")
+df12 = pd.read_csv("g12.csv")
+df13 = pd.read_csv("g13.csv")
+df14 = pd.read_csv("g14.csv")
+df15 = pd.read_csv("g15.csv")
