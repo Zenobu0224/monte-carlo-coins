@@ -55,3 +55,47 @@ P(Heads) ≈ 0.5 &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; P(Tails) ≈ 0.5
 </p>
 
 <hr>
+
+<p>
+  <img src="plot2.png">
+</p>
+
+<h2>Plot 2: Pie Chart — Combined Heads and Tails</h2>
+
+<h3>Purpose:</h3>
+<p>
+This plot shows the overall percentage of heads and tails from all 15 groups combined.
+</p>
+
+<h3>How it works:</h3>
+
+<p>Uses total counts calculated by:</p>
+
+<pre><code>full_heads = total_flip_result(..., heads=True)
+full_tails = total_flip_result(..., tails=True)
+</code></pre>
+
+<p>
+Displays percentage of heads and tails.
+</p>
+
+<h3>What it shows:</h3>
+
+<p>Example result:</p>
+
+<ul>
+<li>Heads: 50.1%</li>
+<li>Tails: 49.9%</li>
+</ul>
+
+<h3>Interpretation:</h3>
+
+<p>
+This confirms that the coin toss simulation behaves like a fair random process.
+</p>
+
+<p>
+The closer the result is to 50%–50%, the more it follows theoretical probability.
+</p>
+
+<hr>
