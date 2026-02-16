@@ -91,3 +91,20 @@ df12 = pd.read_csv("g12.csv")
 df13 = pd.read_csv("g13.csv")
 df14 = pd.read_csv("g14.csv")
 df15 = pd.read_csv("g15.csv")
+
+
+# var for old
+old1_heads_df14_cumsum = np.cumsum(df14['1A-H'])
+old1_heads_df14 = old1_heads_df14_cumsum.iloc[-1]
+old1_tails_df14_cumsum = np.cumsum(df14['1A-T'])
+old1_tails_df14 = old1_tails_df14_cumsum.iloc[-1]
+
+old1_heads = result_per_coin(df5['1A-CH'].iloc[-1], df8['1A-CH'].iloc[-1], df11['1A-CH'].iloc[-1], df13['1A-CH'].iloc[-1], old1_heads_df14)
+old5_heads = result_per_coin(df2['5A-CH'].iloc[-1], df4['5A-CH'].iloc[-1], df7['5A-CH'].iloc[-1], df12['5A-CH'].iloc[-1])
+old10_heads = result_per_coin(df3['10A-CH'].iloc[-1], df7['10A-CH'].iloc[-1], df13['10A-CH'].iloc[-1])
+old_others_heads = result_per_coin(df1['2A-CH'].iloc[-1])
+
+old1_tails = result_per_coin(df5['1A-CT'].iloc[-1], df8['1A-CT'].iloc[-1],  df11['1A-CT'].iloc[-1], df13['1A-CT'].iloc[-1], old1_tails_df14)
+old5_tails = result_per_coin(df2['5A-CT'].iloc[-1], df4['5A-CT'].iloc[-1], df7['5A-CT'].iloc[-1], df12['5A-CT'].iloc[-1])
+old10_tails = result_per_coin(df3['10A-CT'].iloc[-1], df7['10A-CT'].iloc[-1], df13['10A-CT'].iloc[-1])
+old_others_tails = result_per_coin(df1['2A-CT'].iloc[-1])
